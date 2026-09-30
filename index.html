@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김민수 - 프로필</title>
+    <style>
+        :root {
+            --apple-bg: #000000;
+            --apple-text: #f5f5f7;
+            --apple-gray: #86868b;
+            --apple-blue: #2997ff;
+            --apple-blue-hover: #0071e3;
+        }
+        body {
+            font-family: "SF Pro Text", "SF Pro Display", "Apple Neo Gothic", "Malgun Gothic", -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--apple-bg);
+            color: var(--apple-text);
+            text-align: center;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Top Navigation */
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+        nav span {
+            color: #f5f5f7;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        /* Hero Profile Section */
+        .hero {
+            padding: 120px 20px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            margin: 0 0 10px 0;
+        }
+        .hero h2 {
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--apple-gray);
+            margin: 0 0 40px 0;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(255,255,255,0.05);
+        }
+        /* Product (Book) Section */
+        .product-section {
+            background-color: #111;
+            padding: 100px 20px;
+            border-top: 1px solid #333;
+        }
+        .product-badge {
+            color: #bf4800;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .product-section h2 {
+            font-size: 48px;
+            font-weight: 600;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.005em;
+        }
+        .product-section p {
+            font-size: 21px;
+            font-weight: 400;
+            color: var(--apple-gray);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.4;
+        }
+        .buy-link {
+            display: inline-block;
+            background-color: var(--apple-text);
+            color: var(--apple-bg);
+            padding: 12px 22px;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 50px;
+            transition: transform 0.3s ease;
+        }
+        .buy-link:hover {
+            transform: scale(1.03);
+        }
+        .book-img {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            display: block;
+            margin: 0 auto;
+        }
+        /* Video Section */
+        .video-section {
+            padding: 100px 20px;
+        }
+        .video-section h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            letter-spacing: -0.005em;
+        }
+        .video-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+            border: 1px solid #333;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <span>Profile</span>
+    </nav>
+
+    <!-- 프로필 섹션 -->
+    <section class="hero">
+        <img src="profile.jpg" alt="프로필 사진" class="profile-img" onerror="this.src='https://via.placeholder.com/200/333/fff?text=Profile'">
+        <h1>김민수</h1>
+        <h2>디자인. 혁신. 그리고 나.</h2>
+        <p style="color: var(--apple-gray); font-size: 19px; max-width: 600px; margin: 0 auto; line-height: 1.5;">
+            여기에 소개 내용이 들어갑니다. (소개글 텍스트 파일 내용을 이곳에 복사해서 넣어주세요.)<br>
+            제 개인 랜딩 페이지에 오신 것을 환영합니다. 끊임없이 새로움을 추구합니다.
+        </p>
+    </section>
+
+    <!-- 책 섹션 -->
+    <section class="product-section">
+        <div class="product-badge">New</div>
+        <h2>새로운 책. 놀라운 경험.</h2>
+        <p>
+            책에 대한 간략한 소개를 여기에 적어주세요. 완전히 새로운 시각을 선사합니다.
+        </p>
+        <a href="https://교보문고.링크.입력" class="buy-link" target="_blank">구입하기</a>
+        <img src="book.jpg" alt="책 표지" class="book-img" onerror="this.src='https://via.placeholder.com/300x450/333/fff?text=Book+Cover'">
+    </section>
+
+    <!-- 유튜브 섹션 -->
+    <section class="video-section">
+        <h2>영감의 순간을 영상으로.</h2>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+
+</body>
+</html>
